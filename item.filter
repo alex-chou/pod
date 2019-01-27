@@ -6,8 +6,12 @@ ItemDisplay[GOLD>0]:
 ItemDisplay[rvl]: %PURPLE%[%WHITE%FULL%PURPLE%] // Full Rejuvenation Potion
 ItemDisplay[hp5]: %RED%[%WHITE%HP%RED%] // Super Health Potion
 ItemDisplay[mp5]: %BLUE%[%WHITE%MP%BLUE%] // Super Mana Potion
-ItemDisplay[hp1 OR hp2 OR hp3 OR hp4]: // Other Health Potions
-ItemDisplay[mp1 OR mp2 OR mp3 OR mp4]: // Other Mana Potions
+ItemDisplay[hp1 OR hp2 OR hp3 OR hp4]:// Other Health Potions
+ItemDisplay[mp1 OR mp2 OR mp3 OR mp4]:// Other Mana Potions
+
+ItemDisplay[vps]:// Stamina
+ItemDisplay[wms]:// Thawing
+ItemDisplay[yps]:// Antidote
 
 // Gems
 ItemDisplay[gcv OR gcy OR gcb OR gcg OR gcr OR gcw OR skc]: // chipped
