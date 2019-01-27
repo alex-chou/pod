@@ -1,6 +1,6 @@
 //Find item codes at: https://pathofdiablo.com/wiki/index.php?title=Loot_Filtration_Codes
 // Ignore all gold
-ItemDisplay[GOLD]:
+ItemDisplay[GOLD>0]:
 
 // Potions
 ItemDisplay[rvl]: %PURPLE%[%WHITE%FULL%PURPLE%] // Full Rejuvenation Potion
