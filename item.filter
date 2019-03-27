@@ -1,6 +1,6 @@
 //Find item codes at: https://pathofdiablo.com/wiki/index.php?title=Loot_Filtration_Codes
 // Ignore all gold
-ItemDisplay[GOLD]:
+ItemDisplay[GOLD>0]:
 
 // Potions
 ItemDisplay[rvl]: %PURPLE%[%WHITE%FULL%PURPLE%] // Full Rejuvenation Potion
@@ -8,48 +8,52 @@ ItemDisplay[hp5]: %RED%[%WHITE%HP%RED%] // Super Health Potion
 ItemDisplay[mp5]: %BLUE%[%WHITE%MP%BLUE%] // Super Mana Potion
 ItemDisplay[hp1 OR hp2 OR hp3 OR hp4]: // Other Health Potions
 ItemDisplay[mp1 OR mp2 OR mp3 OR mp4]: // Other Mana Potions
+ItemDisplay[rvs]: // Rejuvination Potion
+ItemDisplay[vps]: // Stamina
+ItemDisplay[wms]: // Thawing
+ItemDisplay[yps]: // Antidote
 
 // Gems
-ItemDisplay[gcv OR gcy OR gcb OR gcg OR gcr OR gcw OR skc]: // chipped
-ItemDisplay[gfv OR gfy OR gfb OR gfg OR gfr OR gfw OR skf]: // flawed
-ItemDisplay[gsv OR gsy OR gsb OR gsg OR gsr OR gsw OR sku]: // standard
+ItemDisplay[gcv OR gcy OR gcb OR gcg OR gcr OR gcw OR skc]: // Chipped
+ItemDisplay[gfv OR gfy OR gfb OR gfg OR gfr OR gfw OR skf]: // Flawed
+ItemDisplay[gsv OR gsy OR gsb OR gsg OR gsr OR gsw OR sku]: // Standard
 // Flawless
-ItemDisplay[gzv]: %TAN%FAMETHYST
-ItemDisplay[glw]: %TAN%FDIAMOND
-ItemDisplay[glg]: %TAN%FEMERALD
-ItemDisplay[glr]: %TAN%FRUBY
-ItemDisplay[glb]: %TAN%FSAPPHIRE
-ItemDisplay[gly]: %TAN%FTOPAZ
-ItemDisplay[skl]: %TAN%FSKULL
+ItemDisplay[gzv]: %PURPLE%F %WHITE%Amethyst
+ItemDisplay[glw]: %PURPLE%F %WHITE%Diamond
+ItemDisplay[glg]: %PURPLE%F %WHITE%Emerald
+ItemDisplay[glr]: %PURPLE%F %WHITE%Ruby
+ItemDisplay[glb]: %PURPLE%F %WHITE%Sapphire
+ItemDisplay[gly]: %PURPLE%F %WHITE%Topaz
+ItemDisplay[skl]: %PURPLE%F %WHITE%Skull
 // Perfect
-ItemDisplay[gpv]: %TAN%PAMETHYST
-ItemDisplay[gpw]: %TAN%PDIAMOND
-ItemDisplay[gpg]: %TAN%PEMERALD
-ItemDisplay[gpr]: %TAN%PRUBY
-ItemDisplay[gpb]: %TAN%PSAPPHIRE
-ItemDisplay[gpy]: %TAN%PTOPAZ
-ItemDisplay[skz]: %TAN%PSKULL
+ItemDisplay[gpv]: %WHITE%P Amethyst
+ItemDisplay[gpw]: %WHITE%P Diamond
+ItemDisplay[gpg]: %WHITE%P Emerald
+ItemDisplay[gpr]: %WHITE%P Ruby
+ItemDisplay[gpb]: %WHITE%P Sapphire
+ItemDisplay[gpy]: %WHITE%P Topaz
+ItemDisplay[skz]: %WHITE%P Skull
 
 // Runes
-//1-16 
-ItemDisplay[r01 OR r02 OR r03 OR r04 OR r05 OR r06 OR r07 OR r08 OR r09 OR r10 OR r11 OR r12 OR r13 OR r14 OR r15 OR r16]: %TAN%%RUNENAME% [%RUNENUM%]
-//17-33
-ItemDisplay[r17 OR r18 OR r19 OR r20 OR r21 OR r22 OR r23 OR r24 OR r25 OR r26 OR r27 OR r28 OR r29 OR r30 OR r31 OR r32 OR r33]: %ORANGE%%RUNENAME% [%RUNENUM%]
+// 1-16
+ItemDisplay[r01 OR r02 OR r03 OR r04 OR r05 OR r06 OR r07 OR r08 OR r09 OR r10 OR r11 OR r12 OR r13 OR r14 OR r15 OR r16]: %ORANGE%%RUNENAME% [%RUNENUM%]
+// 17-27
+ItemDisplay[r17 OR r18 OR r19 OR r20 OR r21 OR r22 OR r23 OR r24 OR r25 OR r26 OR r27]: %ORANGE%** %RUNENAME% [%RUNENUM%] **
+// 28-33
+ItemDisplay[r28 OR r29 OR r30 OR r31 OR r32 OR r33]: %ORANGE%***** %RUNENAME% [%RUNENUM%] *****
 
-// Items
-//Essences (Respec Token)
-ItemDisplay[tes]: %BLUE[%GOLD%Suffering%BLUE%]
-ItemDisplay[ceh]: %YELLOW%[%GOLD%Hatred%YELLOW%]
-ItemDisplay[bet]: %RED%[%GOLD%Terror%RED%]
-ItemDisplay[fed]: %GREEN%[%GOLD%Destruction%GREEN%]
+// Essences (Respec Token)
+ItemDisplay[tes]: %GOLD%[%BLUE%Suffering%GOLD%]
+ItemDisplay[ceh]: %GOLD%[%YELLOW%Hatred%GOLD%]
+ItemDisplay[bet]: %GOLD%[%RED%Terror%GOLD%]
+ItemDisplay[fed]: %GOLD%[%DGREEN%Destruction%GOLD%]
 ItemDisplay[toa]: %GOLD%Token
-//PoD Items
+// PoD Items
 ItemDisplay[cx5]: %PURPLE%OOC
 ItemDisplay[cx8]: %PURPLE%OOE
 ItemDisplay[cx6 OR cx7 OR cx9 OR ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR maz]: %PURPLE%%NAME%
-//Wirt's Leg
-ItemDisplay[leg]: %NAME%
-//Uber Keys
+ItemDisplay[leg]: %NAME% // Wirt's Leg
+// Uber Stuff
 ItemDisplay[pk1]: %GOLD%Terror
 ItemDisplay[pk2]: %GOLD%Hate
 ItemDisplay[pk3]: %GOLD%Destruction
@@ -57,23 +61,45 @@ ItemDisplay[dhn]: %GOLD%Diablo's Horn
 ItemDisplay[bey]: %GOLD%Baal's Eye
 ItemDisplay[mbr]: %GOLD%Mephisto's Brain
 
-// All norm white items 1sox hidden
-ItemDisplay[NMAG SOCK=1 !leg]:
-//+3 Shiver Armor
-ItemDisplay[WP11 NMAG (SOCK=0 OR SOCK=4) (TABSK10>1 AND SK50>2)]: %NAME% %WHITE%[%SOCKETS%]%BLUE%[%WHITE%3SA%BLUE%]
+// Items
+ItemDisplay[NMAG SOCK=1 !leg]: // 1 Socket White Items
+ItemDisplay[(NMAG OR MAG) (aq2 OR cq2)]: // White and Blue arrows and bolts
+ItemDisplay[MAG NORM]: // Normal Blue items
+ItemDisplay[WP11 NMAG (SOCK=0 OR SOCK=4) AND SK58>=2]: %NAME% %ORANGE%Energy Shield %WHITE%[%SOCKETS%]
+ItemDisplay[WP11 NMAG (SOCK=0 OR SOCK=4) AND (SK50>=1 AND SK58>=2)]: %NAME% %ORANGE% Energy Shield and Shiver Armor %WHITE%[%SOCKETS%]
+ItemDisplay[CL3 (SOCK=0 OR SOCK>2)]: %NAME% // Paladin Shields
+ItemDisplay[EQ2 SUP ELT SOCK>2]: %ORANGE%* %NAME%
+
+// Charms
+ItemDisplay[UNI (cm1 OR cm2 OR cm3)]: %NAME% %ORANGE%*%BLUE%
+ItemDisplay[MAG cm1 OR cm3]: %ORANGE%* %BLUE%%NAME% %ORANGE%*%BLUE%
+ItemDisplay[cm1 OR cm3]: %ORANGE%* %WHITE%%NAME% %ORANGE%*%BLUE%
+ItemDisplay[cm2]: // Large Charms
+
+// Accessories
+ItemDisplay[MAG rin]: %ORANGE%* %BLUE%Ring
+ItemDisplay[RARE rin]: %ORANGE%* %YELLOW%Ring
+ItemDisplay[MAG amu]: %ORANGE%* %BLUE%Amulet %GOLD%[%WHITE%%ILVL%%GOLD%] %ORANGE%*%BLUE%
+ItemDisplay[RARE amu]: %ORANGE%* %YELLOW%Amulet %ORANGE%*%YELLOW%
+ItemDisplay[MAG jew]: %ORANGE%* %BLUE%Jewel %ORANGE%*%BLUE%
+ItemDisplay[RARE jew]: %ORANGE%* %YELLOW%Jewel %ORANGE%*%YELLOW%
+ItemDisplay[UNI jew]: %ORANGE%** %GOLD%Jewel %ORANGE%**%GOLD%
+
+// Runewords
+ItemDisplay[RW]: %NAME%
 
 // Miscellaneous
 ItemDisplay[key]: %WHITE%Key
-ItemDisplay[tsc]: %BLUE%!%WHITE%TP
-ItemDisplay[isc]: %RED%!%WHITE%ID
-ItemDisplay[tbk]: %BLUE%!%WHITE%TP Book
-ItemDisplay[ibk]: %RED%!%WHITE%ID Book
-ItemDisplay[(WP11 OR WP12 OR WP13) (NMAG OR MAG) !RW SOCK<2]: %WHITE%%NAME% ($ %PRICE%) // staves, wands and scepters
-ItemDisplay[bbb OR ass OR bkd OR bks OR box OR g34 OR ice OR j34 OR mss OR qbr OR qey OR ahr OR tr1 OR tr2 OR xyz]: %TAN%%NAME%
+ItemDisplay[tsc]: %BLUE%T%WHITE%P
+ItemDisplay[isc]: // ID scrolls
+ItemDisplay[tbk]: %BLUE%T%WHITE%P Book
+ItemDisplay[ibk]: %RED%I%WHITE%D Book
+ItemDisplay[(WP11 OR WP12 OR WP13) (NMAG OR MAG) !RW SOCK<2]: %NAME% ($ %PRICE%) // staves, wands and scepters
+ItemDisplay[bbb OR ass OR bkd OR bks OR box OR g34 OR ice OR j34 OR mss OR qbr OR qey OR ahr OR tr1 OR tr2 OR xyz OR std]: %TAN%%NAME%
 ItemDisplay[ear]: %ORANGE%%NAME%
 
 // Catchall
-ItemDisplay[NMAG]:
 ItemDisplay[ETH SOCK>0]: ETH %NAME% [%SOCKETS%]
 ItemDisplay[ETH SOCK=0]: ETH %NAME%
 ItemDisplay[SOCK>0]: %NAME% [%SOCKETS%]
+ItemDisplay[NMAG]:
